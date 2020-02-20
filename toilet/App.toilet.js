@@ -23,7 +23,7 @@ import Detail from './app/pages/read/Detail';
 const bottomTabOptions = (tabBarTitle, {iconName, typeName}, navTitle) => {
   const tabBarLabel = tabBarTitle;
   const tabBarIcon = ({tintColor, focused}) => {
-    return <Icon name={iconName} type={typeName} size={25} color={tintColor} />;
+    return <Icon name={iconName} type={typeName} size={26} color={tintColor} />;
   };
   const headerTitle = () => {
     return <Text>{navTitle}</Text>;
@@ -35,10 +35,10 @@ const bottomTabOptions = (tabBarTitle, {iconName, typeName}, navTitle) => {
   return {
     tabBarLabel,
     tabBarIcon,
+    tabBarVisible,
     headerTitle,
     headerTitleStyle,
     headerStyle,
-    tabBarVisible,
   };
 };
 
@@ -52,12 +52,12 @@ const AppTabNavigator = createBottomTabNavigator(
     ReaderBox: {
       screen: Reader,
       navigationOptions: () =>
-        bottomTabOptions('阅读', {iconName: 'compass', typeName: 'feather'}),
+        bottomTabOptions('阅读', {iconName: 'book-open', typeName: 'feather'}),
     },
     WeatherBox: {
       screen: Weather,
       navigationOptions: () =>
-        bottomTabOptions('天气', {iconName: 'compass', typeName: 'feather'}),
+        bottomTabOptions('天气', {iconName: 'cloud', typeName: 'feather'}),
     },
     SettingBox: {
       screen: Setting,
@@ -70,6 +70,12 @@ const AppTabNavigator = createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: '#FF9744',
       inactiveTintColor: 'gray',
+      labelStyle: {
+        fontSize: 12,
+      },
+      style: {
+        paddingTop: 5,
+      },
     },
   },
 );

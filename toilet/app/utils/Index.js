@@ -6,9 +6,9 @@
  */
 import React, {Component} from 'react';
 
-import {Dimensions, PixelRatio, ActivityIndicatorIOS} from 'react-native';
+import {Dimensions, PixelRatio, ActivityIndicator} from 'react-native';
 
-module.exports = {
+export default {
   navigationHeight: 44,
   navigationBarBGColor: '#3497FF',
   statusBarHeight: 20,
@@ -37,5 +37,29 @@ module.exports = {
       });
   },
   /*loading效果*/
-  loading: <ActivityIndicatorIOS color="#3E00FF" style={{marginTop: 40}} />,
+  loading: <ActivityIndicator color="#3E00FF" style={{marginTop: 40}} />,
+
+  getAppBarHeight: () => {
+    return 44;
+    // return Platform.OS === 'ios'
+    //     ? isLandscape && !Platform.isPad
+    //         ? 32
+    //         : 44
+    //     : 56;
+  },
+  isAndroid() {
+    return Platform.OS !== 'ios';
+  },
+  isIphoneX: () => {
+    const d = Dimensions.get('window');
+    return (
+      Platform.OS === 'ios' &&
+      !Platform.isPad &&
+      !Platform.isTVOS &&
+      (d.height === 812 || d.width === 812)
+    );
+  },
+  getIphoneStatusBarHeight: () => {
+    return this.isIphoneX() ? 50 : 20;
+  },
 };
