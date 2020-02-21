@@ -153,7 +153,6 @@ class Weather extends Component {
       longitude +
       '&key=' +
       Constant.tencent_location_api.APP_KEY;
-    console.log('url', url);
     fetch(url)
       .then(response => {
         if (response.ok) {
@@ -161,7 +160,6 @@ class Weather extends Component {
         }
       })
       .then(jsonData => {
-        console.log('jsonData', jsonData);
         this.locationRequestSuccess(jsonData);
       })
       .catch(error => {
@@ -188,7 +186,6 @@ class Weather extends Component {
         })
         .then(result => {
           const results = result.data;
-          console.log('results', results);
 
           if (results && results.length > 0) {
             for (let i = 0; i < results.length; i++) {
