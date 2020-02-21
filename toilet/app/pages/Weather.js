@@ -12,9 +12,8 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Header, Icon} from 'react-native-elements';
-
 import AsyncStorage from '@react-native-community/async-storage';
-
+import {Geolocation} from 'react-native-baidu-map';
 import Constant from '../config/Constant';
 
 import Util from '../utils/Index';
@@ -113,6 +112,7 @@ class Weather extends Component {
    * 成功获取定位权限
    */
   locationPermissionRequestSuccess = () => {
+    let that = this;
     CityListManager.getCityList(cityList => {
       cityList = [];
       if (cityList && cityList.length > 0) {
@@ -123,7 +123,18 @@ class Weather extends Component {
         });
       } else {
         // 如果没有一个城市列表缓存则去定位
-        this.tencentLocationRequest('30.280837', '120.09132');
+        // this.tencentLocationRequest('30.280837', '120.09132');
+        Geolocation.getCurrentPosition()
+          .then(res => {
+            // 纬度
+            const latitude = res.latitude;
+            // 经度
+            const longitude = res.longitude;
+            that.tencentLocationRequest(latitude, longitude);
+          })
+          .catch(err => {
+            ToastUtil.show(error);
+          });
         // navigator.geolocation.getCurrentPosition(
         //   location => {
         //     // 纬度

@@ -5601,6 +5601,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
+react-native-baidu-map@^1.0.26:
+  version "1.0.26"
+  resolved "https://registry.npm.taobao.org/react-native-baidu-map/download/react-native-baidu-map-1.0.26.tgz#1615d47c49bd18eb6850260503c14d80b0538335"
+  integrity sha1-FhXUfEm9GOtoUCYFA8FNgLBTgzU=
+
 react-native-elements@^1.2.7:
   version "1.2.7"
   resolved "https://registry.npm.taobao.org/react-native-elements/download/react-native-elements-1.2.7.tgz#1eca2db715c41722aeb67aea62bd2a4621adb134"
@@ -5660,10 +5665,10 @@ react-native-safe-area-view@^0.14.6, react-native-safe-area-view@^0.14.8:
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
-react-native-screens@^2.0.0-beta.7:
-  version "2.0.0-beta.7"
-  resolved "https://registry.npm.taobao.org/react-native-screens/download/react-native-screens-2.0.0-beta.7.tgz#12f2bf09328c8e483d80fb9ff8d40fee0689a98c"
-  integrity sha1-EvK/CTKMjkg9gPuf+NQP7gaJqYw=
+react-native-screens@^2.0.0-beta.10:
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/react-native-screens/download/react-native-screens-2.0.0-beta.10.tgz#129b7b7887cd68374131442bc5b9613d0db847cd"
+  integrity sha1-Ept7eIfNaDdBMUQrxblhPQ24R80=
   dependencies:
     debounce "^1.2.0"
 

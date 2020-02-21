@@ -1,7 +1,10 @@
 import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {createStackNavigator} from 'react-navigation-stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from 'react-navigation-stack';
 import {Icon} from 'react-native-elements';
 
 // 启动面
@@ -130,10 +133,6 @@ let AppAllStack = createStackNavigator(
   {
     initialRouteName: 'TabNavigator',
     headerMode: 'none',
-    navigationOptions: {
-      gestureEnabled: true,
-      headerShown: false,
-    },
   },
 );
 
@@ -141,19 +140,20 @@ const SplashStack = createStackNavigator(
   {
     SplashPage: {
       screen: SplashPage,
-      navigationOptions: {
-        gestureEnabled: true,
-      },
     },
     AppPage: AppAllStack,
   },
   {
-    // mode: 'card',
+    mode: 'card',
     headerMode: 'none',
     initialRouteName: 'SplashPage',
-    // transitionConfig: () => ({
-    //   screenInterpolator: StackViewStyleInterpolator.forHorizontal,
-    // }),
+    defaultNavigationOptions: {
+      headerShown: false,
+      gestureEnabled: true,
+      gestureDirection: 'horizontal',
+      cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid,
+      headerShown: false,
+    },
   },
 );
 
