@@ -5,7 +5,9 @@
 借鉴架构设计和源码，并进行二开。                  
 源地址： https://github.com/vczero/toilet.git 
 
+
 >## 服务端
+![](assets/backend.png)
 
 获取模块列表服务:   
        
@@ -33,3 +35,14 @@
 >## 架构  
 
 ![](assets/fm.png)
+
+>## 接口设计
+![](assets/api.png)
+![](assets/api2.png)
+![](assets/api3.png)
+
+
+>## 注意
+1. 需要进行端口映射
+  adb reverse tcp:3000 tcp:3000
+  
