@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   FlatList,
+  Alert,
 } from 'react-native';
 import {Header, Icon} from 'react-native-elements';
 
@@ -31,17 +32,18 @@ class News extends Component {
     let url = dataReadUrl + this.state.type;
     Util.get(
       url,
-      function(res) {
+      res => {
         if (res.status) {
           that.setState({
             data: res.data,
           });
         } else {
-          alert('服务异常,正在紧急修复,请耐心等待');
+          Alert.alert('服务异常,正在紧急修复,请耐心等待');
         }
       },
-      function(err) {
-        alert('服务异常,正在紧急修复,请耐心等待');
+      err => {
+        console.log(err);
+        Alert.alert('服务异常,正在紧急修复,请耐心等待');
       },
     );
   }

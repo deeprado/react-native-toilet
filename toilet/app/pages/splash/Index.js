@@ -27,7 +27,7 @@ class Index extends Component {
 
   componentDidMount() {
     this.timer = setTimeout(() => {
-      this.props.navigation.replace('AppPage');
+      this.props.navigation.navigate('AppPage');
       this.timer && clearTimeout(this.timer);
     }, 2000);
   }
@@ -35,7 +35,7 @@ class Index extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {/* <StatusBar translucent={true} hidden={true} animated={true} /> */}
+        <StatusBar translucent={true} hidden={true} animated={true} />
         <Image source={launcherPng} style={styles.launcher} />
       </View>
     );

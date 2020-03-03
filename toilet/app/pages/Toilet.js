@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Header, Icon} from 'react-native-elements';
+import {Header} from 'react-native-elements';
 import TWebView from '../components/TWebView';
 import * as Config from '../config/Index';
 

@@ -1,10 +1,8 @@
 import React from 'react';
-import {createAppContainer} from 'react-navigation';
+import {Text} from 'react-native';
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from 'react-navigation-stack';
+import {createStackNavigator} from 'react-navigation-stack';
 import {Icon} from 'react-native-elements';
 
 // 启动面
@@ -12,6 +10,7 @@ import SplashPage from './app/pages/splash/Index';
 // 页面
 import Toilet from './app/pages/Toilet';
 import Weather from './app/pages/Weather';
+
 // 设置
 import Setting from './app/pages/Setting';
 import Intro from './app/pages/setting/Intro';
@@ -136,7 +135,7 @@ let AppAllStack = createStackNavigator(
   },
 );
 
-const SplashStack = createStackNavigator(
+const SplashStack = createSwitchNavigator(
   {
     SplashPage: {
       screen: SplashPage,
@@ -144,15 +143,12 @@ const SplashStack = createStackNavigator(
     AppPage: AppAllStack,
   },
   {
-    mode: 'card',
     headerMode: 'none',
     initialRouteName: 'SplashPage',
     defaultNavigationOptions: {
       headerShown: false,
       gestureEnabled: true,
       gestureDirection: 'horizontal',
-      cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid,
-      headerShown: false,
     },
   },
 );

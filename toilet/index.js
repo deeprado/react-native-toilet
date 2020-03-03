@@ -2,7 +2,10 @@
  * @format
  */
 import {AppRegistry} from 'react-native';
-import 'react-native-gesture-handler';
+// import {enableScreens} from 'react-native-screens';
+
+// import 'react-native-gesture-handler';
+// enableScreens();
 
 // import App from './App';
 import App from './App.toilet';
