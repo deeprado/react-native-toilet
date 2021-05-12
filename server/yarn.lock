@@ -1045,10 +1045,10 @@ nodemailer-wellknown@^0.2.3:
   resolved "https://registry.npm.taobao.org/nodemailer-wellknown/download/nodemailer-wellknown-0.2.3.tgz#640ed204a016627643f98739a94f8ef9d39ca0a9"
   integrity sha1-ZA7SBKAWYnZD+Yc5qU+O+dOcoKk=
 
-nodemailer@^6.4.2:
-  version "6.4.2"
-  resolved "https://registry.npm.taobao.org/nodemailer/download/nodemailer-6.4.2.tgz?cache=0&sync_timestamp=1576128303423&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnodemailer%2Fdownload%2Fnodemailer-6.4.2.tgz#7147550e32cdc37453380ab78d2074533966090a"
-  integrity sha1-cUdVDjLNw3RTOAq3jSB0UzlmCQo=
+nodemailer@^6.4.16:
+  version "6.4.16"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.16.tgz#5cb6391b1d79ab7eff32d6f9f48366b5a7117293"
+  integrity sha512-68K0LgZ6hmZ7PVmwL78gzNdjpj5viqBdFqKrTtr9bZbJYj6BRj5W6WGkxXrEnUl3Co3CBXi3CZBUlpV/foGnOQ==
 
 nodemon@^2.0.2:
   version "2.0.2"
